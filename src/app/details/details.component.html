@@ -1,0 +1,24 @@
+<div *ngIf="selectedCountry">
+
+  <h4>{{selectedCountry.name | uppercase}} Details</h4>
+  <div><span>name: </span>{{selectedCountry.name}}</div>
+  <br>
+  <div><span>alpha2Code: </span>{{selectedCountry.alpha2Code}}</div>
+  <br>
+  <div><span>capital: </span>{{selectedCountry.capital}}</div>
+  <br>
+  <div><span>region: </span>{{selectedCountry.region}}</div>
+  <br>
+  <div><span>population: </span>{{selectedCountry.population}}</div>
+  <br>
+  <div><span>area: </span>{{selectedCountry.area}}</div>
+  <br>
+  <div><span>number of timezones: </span>{{selectedCountry.timezones.length}}</div>
+  <br>
+  <div>
+    <h6>list of languages spoken</h6>
+    <span *ngFor="let l of selectedCountry.languages; let i = index">{{i + 1}}. {{l}} </span>
+  </div>
+
+
+</div>
